@@ -14,11 +14,12 @@ if(isset($_SESSION['usuario'])){
 	<body>
 
 		<div class="container">
-			<h1>Categorias</h1>
+			<h2>Categorias</h2>
 			<div class="row">
 				<div class="col-sm-4">
-					<form id="frmCategorias">
-						<label>Categoria</label>
+					<form class="panel panel-primary" id="frmCategorias">
+					<div class="panel-heading">Digite categoría </div>
+						
 						<input type="text" class="form-control input-sm" name="categoria" id="categoria">
 						<p></p>
 						<span class="btn btn-primary" id="btnAgregaCategoria">Agregar</span>

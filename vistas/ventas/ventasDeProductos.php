@@ -11,9 +11,8 @@ $conexion=$c->conexion();
 	<div class="col-sm-4">
 		<form id="frmVentasProductos">
 			<label>Seleciona Cliente</label>
-			<select class="form-control input-sm" id="clienteVenta" name="clienteVenta">
-				<option value="A">Selecciona</option>
-				<option value="0">Sin cliente</option>
+			<select class="form-control input-sm" placeholder="Busca cliente"id="clienteVenta" name="clienteVenta">
+				
 				<?php
 				$sql="SELECT id_cliente,nombre,apellido 
 				from clientes";
