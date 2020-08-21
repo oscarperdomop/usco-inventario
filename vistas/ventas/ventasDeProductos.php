@@ -6,12 +6,14 @@ $conexion=$c->conexion();
 ?>
 
 
-<h4>Vender un producto</h4>
+<br>
 <div class="row">
 	<div class="col-sm-4">
 		<form id="frmVentasProductos">
+		<div class="panel panel-success  ">
+		<div class="panel-heading">Detalle de producto</div>
 			<label>Seleciona Cliente</label>
-			<select class="form-control input-sm" placeholder="Busca cliente"id="clienteVenta" name="clienteVenta">
+			<select class="form-control input-sm " placeholder="Busca cliente"id="clienteVenta" name="clienteVenta">
 				
 				<?php
 				$sql="SELECT id_cliente,nombre,apellido 
@@ -45,6 +47,7 @@ $conexion=$c->conexion();
 			<p></p>
 			<span class="btn btn-primary" id="btnAgregaVenta">Agregar</span>
 			<span class="btn btn-danger" id="btnVaciarVentas">Vaciar ventas</span>
+		</div>
 		</form>
 	</div>
 	<div class="col-sm-3">

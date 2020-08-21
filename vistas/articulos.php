@@ -13,7 +13,7 @@ if (isset($_SESSION['usuario'])) {
 		<title>A</title>
 		<?php require_once "menu.php"; ?>
 		<?php require_once "../clases/Conexion.php";
-		
+
 		$c = new conectar();
 		$conexion = $c->conexion();
 		$sql = "SELECT id_categoria,nombreCategoria
@@ -26,11 +26,11 @@ if (isset($_SESSION['usuario'])) {
 		<div class="container">
 			<h2>Agregar Articulos</h2>
 			<div class="row">
-				<div class="col-sm-4" >
+				<div class="col-sm-4">
 					<form class="panel panel-primary" id="frmArticulos" enctype="multipart/form-data">
-					<div class="panel-heading">Información del producto</div>
+						<div class="panel-heading">Información del producto</div>
 						<label>Categoria</label>
-						<select  class="form-control input-sm" id="categoriaSelect" name="categoriaSelect">
+						<select class="form-control input-sm" id="categoriaSelect" name="categoriaSelect">
 							<option value="A">Selecciona Categoria</option>
 							<?php while ($ver = mysqli_fetch_row($result)) : ?>
 								<option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>

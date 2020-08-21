@@ -12,13 +12,14 @@
 
 
 <table class="table table-hover table-condensed table-bordered" style="text-align: center;">
-	<caption><label>Categorias :D</label></caption>
+<div class="panel panel-primary ">
+<div class="panel-heading">Categorias creadas:</div>
 	<tr>
-		<td>Categoria</td>
-		<td>Editar</td>
-		<td>Eliminar</td>
+		<th>Categoria</th>
+		<th>Editar</th>
+		<th>Eliminar</th>
 	</tr>
-
+</div>
 	<?php
 	while ($ver=mysqli_fetch_row($result)):
 	 ?>

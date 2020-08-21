@@ -26,7 +26,7 @@ if(isset($_SESSION['usuario'])){
 					</form>
 				</div>
 				<div class="col-sm-6">
-					<div id="tablaCategoriaLoad"></div>
+					<div id="tablaCategoriaLoad"></div> 
 				</div>
 			</div>
 		</div>

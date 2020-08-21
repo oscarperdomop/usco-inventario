@@ -14,10 +14,10 @@
 <body>
 
 	<div class="container">
-		 <h1>Venta de productos</h1>
+		 <h2>VENTA DE PRODUCTOS</h2>
 		 <div class="row">
 		 	<div class="col-sm-12">
-		 		<span class="btn btn-default" id="ventaProductosBtn">Vender producto</span>
+		 		<span class="btn btn-default " id="ventaProductosBtn">Vender producto</span>
 		 		<span class="btn btn-default" id="ventasHechasBtn">Ventas hechas</span>
 		 	</div>
 		 </div>

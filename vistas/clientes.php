@@ -13,10 +13,11 @@ if(isset($_SESSION['usuario'])){
 	</head>
 	<body>
 		<div class="container">
-			<h1>Clientes</h1>
+			<h2>Clientes</h2>
 			<div class="row">
 				<div class="col-sm-4">
-					<form id="frmClientes">
+					<form class="panel panel-primary" id="frmClientes">
+					<div class="panel-heading">Digite datos del cliente</div>
 						<label>Nombre</label>
 						<input type="text" class="form-control input-sm" id="nombre" name="nombre">
 						<label>Apellido</label>
@@ -27,7 +28,7 @@ if(isset($_SESSION['usuario'])){
 						<input type="text" class="form-control input-sm" id="email" name="email">
 						<label>Telefono</label>
 						<input type="text" class="form-control input-sm" id="telefono" name="telefono">
-						<label>RFC</label>
+						<label>NIT</label>
 						<input type="text" class="form-control input-sm" id="rfc" name="rfc">
 						<p></p>
 						<span class="btn btn-primary" id="btnAgregarCliente">Agregar</span>

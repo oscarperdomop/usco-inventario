@@ -18,17 +18,19 @@
 
 <div class="table-responsive">
 	 <table class="table table-hover table-condensed table-bordered" style="text-align: center;">
-	 	<caption><label>Clientes :)</label></caption>
+		 <div class="panel panel-primary ">
+		 <div class="panel-heading">Lista de Clientes:</div>
 	 	<tr>
-	 		<td>Nombre</td>
-	 		<td>Apellido</td>
-	 		<td>Direccion</td>
-	 		<td>Email</td>
-	 		<td>Telefono</td>
-	 		<td>RFC</td>
-	 		<td>Editar</td>
-	 		<td>Eliminar</td>
-	 	</tr>
+	 		<th>Nombre</th>
+	 		<th>Apellido</th>
+	 		<th>Direccion</th>
+	 		<th>Email</th>
+	 		<th>Telefono</th>
+	 		<th>RFC o NIT</th>
+	 		<th>Editar</th>
+	 		<th>Eliminar</th>
+		 </tr>
+		 </div>
 
 	 	<?php while($ver=mysqli_fetch_row($result)): ?>
 
