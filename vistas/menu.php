@@ -38,6 +38,7 @@
               <ul class="dropdown-menu">
                 <li><a href="categorias.php">Categorias</a></li>
                 <li><a href="articulos.php">Articulos</a></li>
+                <li><a href="buscarArticulos.php">Buscar articulos</a></li>
               </ul>
             </li>
 

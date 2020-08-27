@@ -20,6 +20,8 @@ $result = mysqli_query($conexion, $sql);
 
 <div class="table-responsive">
 <table class="table table-responsive table table-hover table-condensed table-bordered" style="text-align: center;">
+
+
 	
 	<div class="panel panel-primary ">
 	<div class="panel-heading">Productos</div>	<tr>
