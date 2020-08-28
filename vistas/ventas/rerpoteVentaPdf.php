@@ -38,7 +38,7 @@ $result=mysqli_query($conexion,$sql);
  	<link rel="stylesheet" type="text/css" href="../../librerias/bootstrap/css/bootstrap.css">
  </head>
  <body>
- 		<img src="../../img/ventas.jpg" width="200" height="200">
+ 		<img src="../../img/ventas.jpeg" width="200" height="125">
  		<br>
  		<table class="table">
  			<tr>

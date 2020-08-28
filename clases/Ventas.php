@@ -1,5 +1,5 @@
 <?php 
-
+include_once "../../clases/Conexion.php";
 class ventas{
 	public function obtenDatosProducto($idproducto){
 		$c=new conectar();
