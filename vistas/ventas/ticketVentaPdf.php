@@ -30,7 +30,7 @@ $result=mysqli_query($conexion,$sql);
 
  ?>	
 
- <!DOCTYPE html>
+
  <html>
  <head>
  	<title>Reporte de venta</title>
@@ -47,7 +47,7 @@ $result=mysqli_query($conexion,$sql);
 
  </head>
  <body>
- 		<p>Facultad autodidacta</p>
+ 		<p>Usco Inventario</p>
  		<p>
  			Fecha: <?php echo $fecha; ?>
  		</p>
@@ -55,7 +55,7 @@ $result=mysqli_query($conexion,$sql);
  			Folio: <?php echo $folio ?>
  		</p>
  		<p>
- 			cliente: <?php echo $objv->nombreCliente($idcliente); ?>
+ 			Cliente: <?php echo $objv->nombreCliente($idcliente); ?>
  		</p>
  		
  		<table style="border-collapse: collapse;" border="1">
