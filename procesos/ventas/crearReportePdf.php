@@ -1,6 +1,6 @@
 <?php
 // Cargamos la librería dompdf que hemos instalado en la carpeta dompdf
-require_once '../../librerias/dompdf/autoload.inc.php';
+include_once '../../librerias/dompdf7/autoload.inc.php';
 use Dompdf\Dompdf;
 
 $id=$_GET['idventa'];
@@ -18,7 +18,7 @@ function file_get_contents_curl($url) {
     return $data;
 }
 
- $html=file_get_contents("http://localhost/ventas/vistas/ventas/rerpoteVentaPdf.php?idventa=".$id);
+ $html=file_get_contents("http://localhost/usco-inventario/vistas/ventas/rerpoteVentaPdf.php?idventa=".$id);
 
 
  
@@ -26,11 +26,12 @@ function file_get_contents_curl($url) {
 $pdf = new DOMPDF();
  
 // Definimos el tamaño y orientación del papel que queremos.
-$pdf->set_paper("letter", "portrait");
+$pdf->setPaper("letter", "portrait");
 //$pdf->set_paper(array(0,0,104,250));
  
 // Cargamos el contenido HTML.
-$pdf->load_html(utf8_decode($html));
+$pdf->loadHtml($html);
+//$pdf->load_html(utf8_decode($html));
  
 // Renderizamos el documento PDF.
 $pdf->render();
@@ -38,5 +39,4 @@ $pdf->render();
 // Enviamos el fichero PDF al navegador.
 $pdf->stream('reporteVenta.pdf');
 
-
-
+//prueba para fork github

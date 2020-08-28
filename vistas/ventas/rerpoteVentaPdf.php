@@ -1,6 +1,6 @@
 <?php 
-	require_once "../../clases/Conexion.php";
-	require_once "../../clases/Ventas.php";
+	include_once "../../clases/Conexion.php";
+	include_once "../../clases/Ventas.php";
 
 	$objv= new ventas();
 
@@ -33,6 +33,7 @@ $result=mysqli_query($conexion,$sql);
  <!DOCTYPE html>
  <html>
  <head>
+	<meta charset="utf-8">
  	<title>Reporte de venta</title>
  	<link rel="stylesheet" type="text/css" href="../../librerias/bootstrap/css/bootstrap.css">
  </head>
@@ -93,3 +94,4 @@ $result=mysqli_query($conexion,$sql);
  		</table>
  </body>
  </html>
+
