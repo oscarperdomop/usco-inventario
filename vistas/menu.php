@@ -5,6 +5,7 @@
 
 <head>
   <title></title>
+  <link rel="shortcut icon" href="https://www.usco.edu.co/imagen-institucional/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
