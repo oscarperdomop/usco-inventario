@@ -10,7 +10,7 @@ if (isset($_SESSION['usuario'])) {
 	<link rel="stylesheet" href="../css/menu.css" />
 
 	<head>
-		<title>A</title>
+		<title>Articulos inventario-Usco</title>
 		<?php require_once "menu.php"; ?>
 		<?php require_once "../clases/Conexion.php";
 

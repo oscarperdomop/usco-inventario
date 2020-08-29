@@ -1,9 +1,0 @@
-<br />
-<b>Warning</b>:  file_get_contents(http://localhost/ventas/vistas/ventas/rerpoteVentaPdf.php?idventa=1): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
- in <b>C:\xampp\htdocs\usco-inventario\procesos\ventas\crearReportePdf.php</b> on line <b>21</b><br />
-<br />
-<b>Warning</b>:  "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? in <b>C:\xampp\htdocs\usco-inventario\librerias\dompdf\src\Dompdf.php</b> on line <b>600</b><br />
-<br />
-<b>Warning</b>:  "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? in <b>C:\xampp\htdocs\usco-inventario\librerias\dompdf\src\Dompdf.php</b> on line <b>621</b><br />
-<br />
-<b>Warning</b>:  "continue" targeting switch is equivalent to "break". Did you mean to

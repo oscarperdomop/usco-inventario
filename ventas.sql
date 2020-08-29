@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-08-2020 a las 02:22:08
+-- Tiempo de generación: 29-08-2020 a las 02:35:27
 -- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.4.3
+-- Versión de PHP: 7.4.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -45,7 +44,26 @@ CREATE TABLE `articulos` (
 --
 
 INSERT INTO `articulos` (`id_producto`, `id_categoria`, `id_imagen`, `id_usuario`, `nombre`, `descripcion`, `cantidad`, `precio`, `fechaCaptura`) VALUES
-(1, 1, 1, 1, 'Guantes Azules', 'Quirúrgicos ', 25, 69000, '2020-08-21');
+(7, 3, 7, 1, 'Ajiaco', 'Sopa de ajiaco con ingredientes de la región. ', 22, 8500, '2020-08-28'),
+(8, 5, 8, 1, 'Chorizos', 'Chorizos marca Brisas 500gr.', 40, 1500, '2020-08-28'),
+(9, 6, 9, 1, 'Mojarra Roja Frita', 'Mojarra Frita mas acompañantes de la región.', 15, 17500, '2020-08-28'),
+(10, 8, 10, 1, 'Bizcochos', 'Bizcochos huilenses, bolsa 30 unids.', 50, 2500, '2020-08-28'),
+(11, 8, 11, 1, 'Asado', 'Plato Asado, porción 750gr mas acompañante de la región.', 20, 19000, '2020-08-28'),
+(12, 8, 12, 1, 'Lechona', 'Plato Lechona. 500gr', 60, 4500, '2020-08-28'),
+(13, 7, 13, 1, 'Queso', 'Queso Huilense', 30, 3500, '2020-08-28'),
+(14, 8, 14, 1, 'Achira Orginal', 'Paquete Achira, bolsa 15 unids.', 50, 2000, '2020-08-28'),
+(15, 8, 15, 1, 'Morcilla o Rellena', 'morcilla o rellena original de la región mas papa. x 500gr.', 100, 3500, '2020-08-28'),
+(16, 8, 16, 1, 'Tamales', 'Tamal Original de la región, unid.', 40, 4000, '2020-08-28'),
+(17, 3, 17, 2, 'Sancocho de gallina', 'Sopa de gallina con presa de pollo y mazorca', 20, 9000, '2020-08-29'),
+(18, 6, 18, 2, 'ceviche de camaron', 'ceviche de 250 gr con galletas', 60, 12000, '2020-08-29'),
+(19, 7, 19, 2, 'Kumis', 'Kumis casero opita', 8000, 40, '2020-08-29'),
+(20, 7, 20, 2, 'Yogurth casero', 'de fresa, mora ,melocoton, guanabana', 30, 7000, '2020-08-29'),
+(21, 4, 21, 2, 'Costillas ahumadas', 'costillas de cerdo de 250 gr', 60, 12000, '2020-08-29'),
+(22, 4, 22, 2, 'chunchulla', 'picada de chunchulla de 200 gr', 10, 5000, '2020-08-29'),
+(23, 5, 23, 2, 'Longaniza', 'longaniza de rivera, ahumada', 40, 7000, '2020-08-29'),
+(24, 8, 24, 2, 'Empanada', 'de carne, de res y cerdo, con huevo', 700, 700, '2020-08-29'),
+(25, 8, 25, 2, 'papa rellena', 'con chicharron , carne molida y aji', 4000, 1500, '2020-08-29'),
+(26, 8, 26, 2, 'Juan Valerio', 'rico juan valerio con chicharron y patacon', 20, 1200, '2020-08-29');
 
 -- --------------------------------------------------------
 
@@ -65,7 +83,12 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`id_categoria`, `id_usuario`, `nombreCategoria`, `fechaCaptura`) VALUES
-(1, 1, 'Guantes', '2020-08-21');
+(3, 1, 'Sopas', '2020-08-28'),
+(4, 1, 'Carnes', '2020-08-28'),
+(5, 1, 'Embutidos', '2020-08-28'),
+(6, 1, 'Pescado', '2020-08-28'),
+(7, 1, 'Lácteos ', '2020-08-28'),
+(8, 1, 'Preparados Huilenses', '2020-08-28');
 
 -- --------------------------------------------------------
 
@@ -89,7 +112,10 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_cliente`, `id_usuario`, `nombre`, `apellido`, `direccion`, `email`, `telefono`, `rfc`) VALUES
-(1, 1, 'Ceminsumos', 'SAS', 'Neiva - Huila', 'ceminsumos@hotmail.com', '3251616', '81114999');
+(1, 1, 'Ceminsumos', 'SAS', 'Neiva - Huila', 'ceminsumos@hotmail.com', '3251616', '81114999'),
+(2, 2, 'comun', 'comun', 'comun', 'comun', '0', '0'),
+(3, 2, 'juan valentin', 'perdomo bonilla', 'calle 19a sur n° 21b-37', 'juanpb902@gmail.com', '3184807217', '105654334'),
+(4, 2, 'Robert', 'Lewandoski', 'Polonia', 'Lewangol@gmail.com', '32332242334', '03039544');
 
 -- --------------------------------------------------------
 
@@ -110,7 +136,26 @@ CREATE TABLE `imagenes` (
 --
 
 INSERT INTO `imagenes` (`id_imagen`, `id_categoria`, `nombre`, `ruta`, `fechaSubida`) VALUES
-(1, 1, 'guantes.jpg', '../../archivos/guantes.jpg', '2020-08-21');
+(7, 3, 'sopa.jpg', '../../archivos/sopa.jpg', '2020-08-28'),
+(8, 5, 'brisas.jpg', '../../archivos/brisas.jpg', '2020-08-28'),
+(9, 6, 'pez.jpg', '../../archivos/pez.jpg', '2020-08-28'),
+(10, 8, 'cochos.jpg', '../../archivos/cochos.jpg', '2020-08-28'),
+(11, 8, 'asado.jpg', '../../archivos/asado.jpg', '2020-08-28'),
+(12, 8, 'lechona.jpg', '../../archivos/lechona.jpg', '2020-08-28'),
+(13, 7, 'queso.jpg', '../../archivos/queso.jpg', '2020-08-28'),
+(14, 8, 'achiras.jpg', '../../archivos/achiras.jpg', '2020-08-28'),
+(15, 8, 'rellena.jpg', '../../archivos/rellena.jpg', '2020-08-28'),
+(16, 8, 'tamales.jpg', '../../archivos/tamales.jpg', '2020-08-28'),
+(17, 3, 'sancocho.jpg', '../../archivos/sancocho.jpg', '2020-08-29'),
+(18, 6, 'ceviche.jpg', '../../archivos/ceviche.jpg', '2020-08-29'),
+(19, 7, 'kumis.jpg', '../../archivos/kumis.jpg', '2020-08-29'),
+(20, 7, 'yogurth.jpg', '../../archivos/yogurth.jpg', '2020-08-29'),
+(21, 4, 'costillas.jpg', '../../archivos/costillas.jpg', '2020-08-29'),
+(22, 4, 'chunchulla.jpg', '../../archivos/chunchulla.jpg', '2020-08-29'),
+(23, 5, 'longaniza.jpg', '../../archivos/longaniza.jpg', '2020-08-29'),
+(24, 8, 'empanada.jpg', '../../archivos/empanada.jpg', '2020-08-29'),
+(25, 8, 'papa.jpg', '../../archivos/papa.jpg', '2020-08-29'),
+(26, 8, 'juanValerio.jpg', '../../archivos/juanValerio.jpg', '2020-08-29');
 
 -- --------------------------------------------------------
 
@@ -132,7 +177,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `email`, `password`, `fechaCaptura`) VALUES
-(1, 'Oscar Perdomo', 'S', 'Zartival', '4e7afebcfbae000b22c7c85e5560f89a2a0280b4', '2020-08-21');
+(1, 'Oscar Perdomo', 'S', 'Zartival', '4e7afebcfbae000b22c7c85e5560f89a2a0280b4', '2020-08-21'),
+(2, 'admin', 'admin', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', '2020-08-29');
 
 -- --------------------------------------------------------
 
@@ -154,9 +200,11 @@ CREATE TABLE `ventas` (
 --
 
 INSERT INTO `ventas` (`id_venta`, `id_cliente`, `id_producto`, `id_usuario`, `precio`, `fechaCompra`) VALUES
-(1, 1, 1, 1, 69000, '2020-08-21'),
-(1, 1, 1, 1, 69000, '2020-08-21'),
-(2, 1, 1, 1, 69000, '2020-08-21');
+(3, 1, 3, 1, 2500, '2020-08-28'),
+(3, 1, 3, 1, 2500, '2020-08-28'),
+(4, 4, 7, 2, 8500, '2020-08-29'),
+(4, 4, 7, 2, 8500, '2020-08-29'),
+(4, 4, 7, 2, 8500, '2020-08-29');
 
 --
 -- Índices para tablas volcadas
@@ -200,31 +248,31 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `articulos`
 --
 ALTER TABLE `articulos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `imagenes`
 --
 ALTER TABLE `imagenes`
-  MODIFY `id_imagen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_imagen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
